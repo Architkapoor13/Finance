@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quote
+{% endblock %}
+
+{% block main %}
+    <div class="form-group">
+        <!--The price of {{ symbol["symbol"] }} of the comany {{ symbol["name"] }} is {{ usd }}.-->
+        Share of {{ symbol["name"] }}({{ symbol["symbol"] }}) costs {{ usd }}.
+    </div>
+{% endblock %}

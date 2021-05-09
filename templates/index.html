@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    index
+{% endblock %}
+
+{% block main %}
+    <table>
+        <tr>
+            <th>Symbol</th>
+            <th>Name</th>
+            <th>Shares</th>
+            <th>Bought price</th>
+            <th>Current Price</th>
+            <th>total if sold</th>
+        </tr>
+        {% for dict in transactions %}
+            <tr>
+            {% for value in dict.values() %}
+                <td>{{ value }}</td>
+            {% endfor %}
+            </tr>
+        {% endfor %}
+        <!--<tr>-->
+        <!--    <td colspan="4">CASH</td>-->
+        <!--    <td>{{ cash }}</td>-->
+        <!--</tr>-->
+    </table>
+
+{% endblock %}
